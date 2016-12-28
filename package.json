@@ -11,5 +11,5 @@
     "aws-sdk": "^2.6.15"
   },
   "author": "jaynsw@gmail.com",
-  "license": "ISC"
+  "license": "MIT"
 }
