@@ -1,4 +1,4 @@
-# High Level Amazon S3 Client
+# Node JS Amazon S3 Client
 
 ## Features
 
@@ -31,7 +31,7 @@
 ### Uploading from local file system to s3
 
 ```js
-var awsConfig = require('../awsconfig');
+var awsConfig = require('./awsconfig');
 
 var s3 = require('ying-s3')(awsConfig);
 ...
@@ -41,7 +41,7 @@ s3.uploads3(id, localPath).then(saveData => {
 ### Downloading from s3 to local file system
 
 ```js
-var awsConfig = require('../awsconfig');
+var awsConfig = require('./awsconfig');
 var s3 = require('ying-s3')(awsConfig);
 ...
 s3.downloads3(id, path).then(saveData => {
