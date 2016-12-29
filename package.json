@@ -1,6 +1,6 @@
 {
   "name": "ying-s3",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,6 @@
     "debug": "^2.3.2",
     "aws-sdk": "^2.6.15"
   },
-  "author": "jaynsw@gmail.com",
+  "author": "jay@veryveryhard.com",
   "license": "MIT"
 }
