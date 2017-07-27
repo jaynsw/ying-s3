@@ -6,12 +6,18 @@ var debug = require('debug')('s3');
 var fs = require('fs');
 var mime = require('mime');
 
+/**
+ * create module object with awsconfig
+ */
 module.exports = function(awsconfig) {
 	AWS.config.update(awsconfig);
 	AWS.config.s3 = awsconfig.s3;
 
 	let exp = {};
 
+	/**
+	 * upload a local file into s3 storage
+	 */
 	exp.uploads3 = function(key, localFile) {
 		debug('uploads3:key:%s,localFile:%s', key, localFile);
 		return new Promise((resolve, reject) => {
@@ -58,6 +64,9 @@ module.exports = function(awsconfig) {
 		});
 	};
 
+	/**
+	 * download a file from s3 storage and save it into local file.
+	 */
 	exp.downloads3 = function(key, localFile) {
 		debug('downloads3->key:%s,localFile:%s', key, localFile);
 		return new Promise((resolve, reject) => {
